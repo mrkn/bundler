@@ -168,7 +168,7 @@ module Bundler
         next if executable == "bundle"
 
         binstub_path = "#{bin_path}/#{executable}"
-        if File.exists?(binstub_path) && !options[:force]
+        if File.exist?(binstub_path) && !options[:force]
           exists << executable
           next
         end
